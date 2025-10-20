@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: "https://me-api-frontend-nyu4.vercel.app/",
+  origin: "https://me-api-frontend-nyu4.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true, // if you send cookies/auth
 }));
