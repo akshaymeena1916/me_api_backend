@@ -8,7 +8,11 @@ import profileRoutes from "./routes/profileRoutes.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://me-api-frontend-nyu4.vercel.app/",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true, // if you send cookies/auth
+}));
 app.use(express.json());
 
 // 2️⃣ Connect to MongoDB
